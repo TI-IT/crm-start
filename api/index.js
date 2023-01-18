@@ -10,20 +10,26 @@ const MongoStore = require('connect-mongo');
 app.use(
   cors({
     credentials: true,
-    origin: ['http://localhost:3000', 'https://yougile.com'],
+    origin: ['http://localhost:3000', 'https://yougile.com', 'https://crm.alumacom.keenetic.pro'],
   }),
 );
 
-let mongoUrl;
+try {
+  let mongoUrl;
 
-if (process.env.NODE_ENV === 'development ') {
-  mongoUrl =
-    'mongodb://adminTiit:' + process.env.MONGO_DEV_PASSWORD + '@127.0.0.1:27017/crm?authSource=crm';
-} else {
-  mongoUrl =
-    'mongodb://adminTiit:' +
-    process.env.MONGO_PRODUCTION_PASSWORD +
-    '@localhost:27017/crm?authSource=crm';
+  if (process.env.NODE_ENV === 'development ') {
+    mongoUrl =
+      'mongodb://adminTiit:' +
+      process.env.MONGO_DEV_PASSWORD +
+      '@127.0.0.1:27017/crm?authSource=crm';
+  } else {
+    mongoUrl =
+      'mongodb://adminTiit:' +
+      process.env.MONGO_PRODUCTION_PASSWORD +
+      '@localhost:27017/crm?authSource=crm';
+  }
+} catch (error) {
+  console.log('index.js стока 18 MONGODB ERROR');
 }
 
 app.use(
