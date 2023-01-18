@@ -26,7 +26,7 @@ try {
     mongoUrl =
       'mongodb://adminTiit:' +
       process.env.MONGO_PRODUCTION_PASSWORD +
-      '@localhost:27017/crm?authSource=crm';
+      '@127.0.0.1:27017/crm?authSource=crm';
   }
 } catch (error) {
   console.log('index.js стока 18 MONGODB ERROR');
