@@ -16,7 +16,7 @@ app.use(
 
 try {
   let mongoUrl;
-  mongoUrl = 'mongodb://adminTiit:Tg30121986@localhost:27017/crm?authSource=crm';
+  mongoUrl = 'mongodb://adminTiit:Tg30121986@127.0.0.1:27017/crm?authSource=crm';
 
   // if (process.env.NODE_ENV === 'development ') {
   //   mongoUrl =
