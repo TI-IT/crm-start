@@ -1,0 +1,27 @@
+@import '../color.scss';
+
+.gridInput {
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+  border: none;
+  // background-color: rgb(97, 82, 82);
+  span {
+    width: 100%;
+    height: 100%;
+    border: none;
+    input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      box-shadow: $colorshadow;
+    }
+    input:hover {
+      border: 2px solid $colorButtonTextHover;
+    }
+    input:focus {
+      transition: all 0.4s;
+      border: 2px solid $colorButtonTextHover;
+    }
+  }
+}

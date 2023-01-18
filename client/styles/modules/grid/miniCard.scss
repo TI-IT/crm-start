@@ -1,0 +1,11 @@
+@import '../color.scss';
+
+.miniCard {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: none;
+  background-color: $colorFormBac;
+  border-radius: 3px;
+}

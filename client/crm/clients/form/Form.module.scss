@@ -1,0 +1,124 @@
+@import '../../../styles/modules/container.scss';
+@import '../../../styles/modules/button.scss';
+@import '../../../styles/modules/color.scss';
+@import '../../../styles/modules/grid/input.scss';
+@import '../../../styles/modules/grid/miniCard2col.scss';
+@import '../../../styles/modules/grid/bigCard.scss';
+@import '../../../styles/modules/grid/card.scss';
+
+$widthForm: 98%;
+$heightForm: 310px;
+$widthForm12: 50%;
+$heightForm12: 100%;
+$widthGroup: 100%;
+$heightGroup: 20%;
+
+.form {
+  position: relative;
+  padding: 10px;
+  left: 10px;
+  width: $widthForm;
+  height: $heightForm;
+  box-shadow: $colorshadow;
+}
+
+.form1 {
+  background-color: $colorFormBac;
+  position: absolute;
+  width: $widthForm12;
+  height: $heightForm12;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.form2 {
+  background-color: $colorFormBac;
+  position: absolute;
+  width: $widthForm12;
+  height: $heightForm12;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.group {
+  width: $widthGroup;
+  height: $heightGroup;
+  position: relative;
+
+  .buttonGroup {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .hide {
+      display: none;
+    }
+    .show {
+      width: 110%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 20px;
+    }
+    .GroupChildren {
+      width: 400%;
+      height: 100%;
+      position: absolute;
+      left: -500%;
+    }
+    .GroupChildrenButton {
+      position: absolute;
+      right: -55%;
+      top: 0;
+    }
+  }
+
+  input {
+    width: 100%;
+    text-align: left;
+    height: 100%;
+    border-radius: 3px;
+    border: none;
+    box-shadow: $colorshadow;
+  }
+
+  .textarea {
+    text-align: left;
+    height: 150%;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    box-shadow: $colorshadow;
+  }
+  .textarea:hover {
+    transition: all 0.4s;
+    border: 1px solid $colorButtonTextHover;
+  }
+  textarea:focus {
+    transition: all 0.4s;
+    height: 160%;
+    font-size: 16px;
+    border: 2px solid $colorButtonTextHover;
+    transform: translate(5px);
+  }
+  .select:hover {
+    transition: all 0.4s;
+    font-size: 16px;
+    border: 1px solid $colorButtonTextHover;
+  }
+}
+.center {
+  text-align: center;
+  padding: 5px;
+}
+.red {
+  background-color: $required;
+}
+.select {
+  width: 80%;
+  height: 100%;
+  border: none;
+  box-shadow: $colorshadow;
+  background-color: $required;
+}

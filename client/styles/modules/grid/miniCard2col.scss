@@ -1,0 +1,19 @@
+@import '../color.scss';
+
+.miniCard2col {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 20% 1fr;
+  border: none;
+  background-color: $colorFormBac;
+
+  span {
+    margin-top: 13px;
+    margin-left: 13px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border: none;
+  }
+}
