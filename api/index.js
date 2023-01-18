@@ -15,9 +15,6 @@ app.use(
 );
 
 try {
-  let mongoUrl;
-  mongoUrl = 'mongodb://adminTiit:Tg30121986@127.0.0.1:27017/crm?authSource=crm';
-
   // if (process.env.NODE_ENV === 'development ') {
   //   mongoUrl =
   //     'mongodb://adminTiit:' +
@@ -32,7 +29,8 @@ try {
 } catch (error) {
   console.log('index.js стока 18 MONGODB ERROR');
 }
-
+let mongoUrl;
+mongoUrl = 'mongodb://adminTiit:Tg30121986@127.0.0.1:27017/crm?authSource=crm';
 app.use(
   sessions({
     secret: 'nvebiruvwnerfqruec3cetiit',
