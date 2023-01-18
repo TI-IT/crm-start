@@ -6,7 +6,7 @@ const cors = require('cors');
 const logger = require('morgan');
 const sessions = require('express-session');
 const MongoStore = require('connect-mongo');
-
+console.log('*************index.js стока 18 MONGODB ERROR');
 app.use(
   cors({
     credentials: true,
@@ -16,18 +16,19 @@ app.use(
 
 try {
   let mongoUrl;
+  mongoUrl = 'mongodb://adminTiit:Tg30121986@localhost:27017/crm?authSource=crm';
 
-  if (process.env.NODE_ENV === 'development ') {
-    mongoUrl =
-      'mongodb://adminTiit:' +
-      process.env.MONGO_DEV_PASSWORD +
-      '@127.0.0.1:27017/crm?authSource=crm';
-  } else {
-    mongoUrl =
-      'mongodb://adminTiit:' +
-      process.env.MONGO_PRODUCTION_PASSWORD +
-      '@localhost:27017/crm?authSource=crm';
-  }
+  // if (process.env.NODE_ENV === 'development ') {
+  //   mongoUrl =
+  //     'mongodb://adminTiit:' +
+  //     process.env.MONGO_DEV_PASSWORD +
+  //     '@127.0.0.1:27017/crm?authSource=crm';
+  // } else {
+  //   mongoUrl =
+  //     'mongodb://adminTiit:' +
+  //     process.env.MONGO_PRODUCTION_PASSWORD +
+  //     '@localhost:27017/crm?authSource=crm';
+  // }
 } catch (error) {
   console.log('index.js стока 18 MONGODB ERROR');
 }
