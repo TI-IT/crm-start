@@ -5,14 +5,7 @@ async function dbConnect() {
     return mongoose.connection.db;
   }
 
-  let url;
-  if (process.env.NODE_ENV === 'development ') {
-    url = 'mongodb://127.0.0.1:27017/crm';
-  } else {
-    url = 'mongodb://localhost:27017/crm';
-  }
-
-  // let url = 'mongodb://127.0.0.1:27017/crm';
+  let url = 'mongodb://localhost:27017/crm';
   let options = {
     user: 'adminTiit',
     pass:
